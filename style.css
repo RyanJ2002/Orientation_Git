@@ -1,0 +1,85 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header/Navbar */
+header {
+  position: sticky;
+  top: 0;
+  background: #2c3e50;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0; padding: 0;
+}
+nav ul li {
+  margin: 0 1rem;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+}
+#home {
+  text-align: center;
+  background: #ecf0f1;
+}
+
+/* Skill List */
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+}
+.skill-list li {
+  background: #3498db;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* Education entries */
+.edu-entry + .edu-entry {
+  margin-top: 1.5rem;
+}
+
+/* Form */
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+input, textarea, button {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  background: #2c3e50;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #2c3e50;
+  color: #fff;
+  padding: 1rem;
+}

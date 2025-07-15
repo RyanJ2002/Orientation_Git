@@ -1,12 +1,66 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一個網頁</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name • Portfolio</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>歡迎來到我的網站</h1>
-    <p>這是我的第一個推送到 GitHub 的網頁！</p>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h1>Hi, I’m [Your Name]</h1>
+      <p>[One-sentence intro about your ability or passion]</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skill-list">
+        <li>HTML & CSS</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React / Vue / Angular</li>
+        <!-- Add more -->
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu-entry">
+        <h3>Master of Science in [Field]</h3>
+        <p>[University Name], [Years]</p>
+      </div>
+      <div class="edu-entry">
+        <h3>Bachelor of [Degree]</h3>
+        <p>[University Name], [Years]</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Get in touch</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" rows="5" placeholder="Your message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>
