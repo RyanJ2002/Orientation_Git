@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             name: 'Biostatistic',
             url: 'https://www.notion.so/Biostatistic-23209be73bbd80479f19f90603252adc?source=copy_link' // Replace with your actual Notion link
+        },
+        {
+            name: 'Github + Html',
+            url: 'https://ryanj2002.github.io/Orientation_Git/' // Replace with your actual Notion link
         }
         // Add more lectures here...
         // {
