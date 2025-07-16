@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Just add new objects to this list to add more rows to the table.
     const lectures = [
         {
-          names: 'Home',
+          name: 'Home',
           url: 'https://www.notion.so/23209be73bbd80af8b8efcff9d95afc0?v=23209be73bbd80dd9062000cc7a24521&source=copy_link'
         },
         {
