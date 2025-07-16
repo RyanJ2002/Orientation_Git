@@ -6,20 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Just add new objects to this list to add more rows to the table.
     const lectures = [
         {
-            name: 'Introduction to Machine Learning',
-            url: 'https://www.notion.so/your-username/your-page-id-1' // Replace with your actual Notion link
+          names: 'Home',
+          url: 'https://www.notion.so/23209be73bbd80af8b8efcff9d95afc0?v=23209be73bbd80dd9062000cc7a24521&source=copy_link'
         },
         {
-            name: 'Deep Learning Fundamentals',
-            url: 'https://www.notion.so/your-username/your-page-id-2' // Replace with your actual Notion link
+            name: 'Python',
+            url: 'https://www.notion.so/Python-23209be73bbd805f9b81e0892a5d31dd?source=copy_link' // Replace with your actual Notion link
         },
         {
-            name: 'Website Design Principles',
-            url: 'https://www.notion.so/your-username/your-page-id-3' // Replace with your actual Notion link
-        },
-        {
-            name: 'JavaScript for Beginners',
-            url: 'https://www.notion.so/your-username/your-page-id-4' // Replace with your actual Notion link
+            name: 'Biostatistic',
+            url: 'https://www.notion.so/Biostatistic-23209be73bbd80479f19f90603252adc?source=copy_link' // Replace with your actual Notion link
         }
         // Add more lectures here...
         // {
