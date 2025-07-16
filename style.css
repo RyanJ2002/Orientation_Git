@@ -1,10 +1,22 @@
 /* Base */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
-}
+        background: #3C3C3C;
+        margin: 0;
+      }
+
+      #backgroundImage {
+        border: none;
+        height: 100%;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        visibility: hidden;
+        width: 100%;
+      }
+
+      [show-background-image] #backgroundImage {
+        visibility: visible;
+      }
 
 /* Header/Navbar */
 header {
@@ -84,21 +96,3 @@ footer {
   padding: 1rem;
 }
 
-body {
-        background: #3C3C3C;
-        margin: 0;
-      }
-
-      #backgroundImage {
-        border: none;
-        height: 100%;
-        pointer-events: none;
-        position: fixed;
-        top: 0;
-        visibility: hidden;
-        width: 100%;
-      }
-
-      [show-background-image] #backgroundImage {
-        visibility: visible;
-      }
