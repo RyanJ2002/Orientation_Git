@@ -1,66 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zhang Zhan Yi</title>
-  <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Lecture Homework</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section id="home">
-      <h1>Zhang Zhan Yi</h1>
-      <p>[One-sentence intro about your ability or passion]</p>
-    </section>
+    <div class="container">
+        <h1>Lecture Homework Links</h1>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul class="skill-list">
-        <li>HTML & CSS</li>
-        <li>JavaScript (ES6+)</li>
-        <li>React / Vue / Angular</li>
-        <!-- Add more -->
-      </ul>
-    </section>
+        <table id="homework-table">
+            <thead>
+                <tr>
+                    <th>Lecture Name</th>
+                    <th>Homework Link (Notion)</th>
+                </tr>
+            </thead>
+            <!-- The table body will be filled by JavaScript -->
+            <tbody id="table-body">
+                <!-- Example of how a row would look (but it will be generated automatically) -->
+                <!-- 
+                <tr>
+                    <td>Introduction to AI</td>
+                    <td><a href="..." target="_blank">View Homework</a></td>
+                </tr> 
+                -->
+            </tbody>
+        </table>
+    </div>
 
-    <section id="education">
-      <h2>Education</h2>
-      <div class="edu-entry">
-        <h3>Master of Science in [Field]</h3>
-        <p>[University Name], [Years]</p>
-      </div>
-      <div class="edu-entry">
-        <h3>Bachelor of [Degree]</h3>
-        <p>[University Name], [Years]</p>
-      </div>
-    </section>
+    <!-- Link to the external JavaScript file -->
+    <!-- Placed at the end of the body for faster page loading -->
+    <script src="script.js"></script>
 
-    <section id="contact">
-      <h2>Get in touch</h2>
-      <form id="contact-form">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" rows="5" placeholder="Your message"></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-  </footer>
-
-  <script src="scripts/script.js"></script>
 </body>
 </html>

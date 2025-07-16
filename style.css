@@ -1,98 +1,68 @@
-/* Base */
+/* General Body and Font Styling */
 body {
-        background: #3C3C3C;
-        margin: 0;
-      }
-
-      #backgroundImage {
-        border: none;
-        height: 100%;
-        pointer-events: none;
-        position: fixed;
-        top: 0;
-        visibility: hidden;
-        width: 100%;
-      }
-
-      [show-background-image] #backgroundImage {
-        visibility: visible;
-      }
-
-/* Header/Navbar */
-header {
-  position: sticky;
-  top: 0;
-  background: #2c3e50;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 0; padding: 0;
-}
-nav ul li {
-  margin: 0 1rem;
-}
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 1rem;
-  display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
 }
 
-/* Sections */
-section {
-  padding: 4rem 2rem;
-}
-#home {
-  text-align: center;
-  background: #ecf0f1;
-}
-
-/* Skill List */
-.skill-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0;
-}
-.skill-list li {
-  background: #3498db;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+/* Centered Container */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Education entries */
-.edu-entry + .edu-entry {
-  margin-top: 1.5rem;
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
 }
 
-/* Form */
-form {
-  display: grid;
-  gap: 1rem;
-  max-width: 400px;
-  margin: 0 auto;
-}
-input, textarea, button {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-button {
-  background: #2c3e50;
-  color: #fff;
-  cursor: pointer;
+/* Table Styling */
+#homework-table {
+    width: 100%;
+    border-collapse: collapse; /* Removes space between borders */
+    margin-top: 20px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  background: #2c3e50;
-  color: #fff;
-  padding: 1rem;
+/* Table Header Styling */
+#homework-table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    padding: 12px 15px;
+    text-align: left;
 }
 
+/* Table Cells Styling */
+#homework-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Zebra-striping for rows for better readability */
+#homework-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect on rows */
+#homework-table tbody tr:hover {
+    background-color: #e8f4fd;
+    cursor: pointer;
+}
+
+/* Link styling */
+#homework-table a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#homework-table a:hover {
+    text-decoration: underline;
+}
