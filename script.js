@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             name: 'Github + Html',
             url: 'https://ryanj2002.github.io/Orientation_Git/' // Replace with your actual Notion link
+        },
+        {
+            name: 'ML I',
+            url: 'https://www.notion.so/ML-I-23309be73bbd80768213ee008cc63635?source=copy_link' // Replace with your actual Notion link
         }
         // Add more lectures here...
         // {
