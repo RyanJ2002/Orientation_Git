@@ -105,52 +105,7 @@
     <script src="script.js"></script>
 
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    
-    const navItems = document.querySelectorAll('.sidebar-nav li');
-    const viewPanes = document.querySelectorAll('.view-pane');
-    
-    // Function to set the initial background on page load
-    function setInitialBackground() {
-        const activeItem = document.querySelector('.sidebar-nav li.active');
-        if (activeItem) {
-            const initialBg = activeItem.dataset.bg;
-            if (initialBg) {
-                document.body.style.backgroundImage = `url('${initialBg}')`;
-            }
-        }
-    }
 
-    // Add click event listener to each navigation item
-    navItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Get data from the clicked item
-            const viewId = this.dataset.view;
-            const bgImage = this.dataset.bg;
-
-            // --- 1. Update the Active State for Navigation ---
-            // Remove 'active' from the current active item
-            document.querySelector('.sidebar-nav li.active').classList.remove('active');
-            // Add 'active' to the clicked item
-            this.classList.add('active');
-
-            // --- 2. Update the Visible Content Pane ---
-            // Hide the current active pane
-            document.querySelector('.view-pane.active').classList.remove('active');
-            // Show the new pane that corresponds to the clicked item
-            document.getElementById(viewId).classList.add('active');
-
-            // --- 3. Update the Body Background Image ---
-            if (bgImage) {
-                document.body.style.backgroundImage = `url('${bgImage}')`;
-            }
-        });
-    });
-
-    // Set the initial background when the page loads
-    setInitialBackground();
-
-});
 </script>
 </body>
 </html>
