@@ -162,6 +162,30 @@ body {
     }
 }
 
-#MeBlock p{
-    background-color: gray
+#MeBlock {
+    /* 1. 設定背景顏色 */
+    background-color: #f0f8ff; /* 使用淡藍色背景 */
+
+    /* 2. 增加內部間距 */
+    padding: 25px;
+
+    /* 3. 設定圓角 */
+    border-radius: 15px; /* 圓角更明顯一點 */
+
+    /* 4. 將區塊內的文字和圖片置中對齊 */
+    text-align: center;
+
+    /* 5. 加上一點陰影，讓區塊有立體感、浮起來的感覺 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    /* 6. 設定最大寬度和邊界，讓它在大螢幕上不會過寬，且能水平置中 */
+    max-width: 600px;
+    margin: 20px auto; /* 上下 20px 邊界，左右自動 (實現置中) */
+}
+#MyPhoto {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* 讓圖片也有圓角，與容器風格一致 */
+    margin-top: 15px;    /* 讓圖片和上下的文字有點間距 */
+    margin-bottom: 15px;
 }
