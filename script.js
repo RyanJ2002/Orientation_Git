@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             name: 'ML I',
             url: 'https://www.notion.so/ML-I-23309be73bbd80768213ee008cc63635?source=copy_link' // Replace with your actual Notion link
+        },
+        {
+            name: 'ML II',
+            url: 'KMeans.html' // Replace with your actual Notion link
         }
         // Add more lectures here...
         // {
@@ -49,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const linkCell = document.createElement('td');
         const link = document.createElement('a'); // Create an anchor (<a>) tag
         link.href = lecture.url; // Set the link's destination
-        link.textContent = 'View in Notion'; // Set the link's visible text
+        link.textContent = 'View'; // Set the link's visible text
         link.target = '_blank'; // Opens the link in a new tab
         link.rel = 'noopener noreferrer'; // Security best practice for target="_blank"
         
