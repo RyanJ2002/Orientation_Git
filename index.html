@@ -3,38 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OrientationHW-Ryan</title>
+    <title>Zhan-Yi Zhang</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>
+        Zhan-Yi Zhang
+    </h1>
+    <!-- Main Container for our component -->
+<div class="main-container">
 
-    <div class="container">
-        <h1>Orientation Homework Links</h1>
+    <!-- ========== LEFT: NAVIGATION LIST ========== -->
+    <nav class="sidebar-nav">
+        <ul>
+            <!-- 
+              The 'active' class marks the default item to show on page load.
+              data-view: Must match the ID of the content div below.
+              data-bg: The path to the background image for this view.
+            -->
+            <li class="active" data-view="view-home" data-bg="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
+                Orientation-HW
+            </li>
+            <li data-view="view-about" data-bg="https://images.unsplash.com/photo-1554755229-ca4470e22232?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
+                About Me
+            </li>
+            <li data-view="view-portfolio" data-bg="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
+                Portfolio
+            </li>
+            <li data-view="view-contact" data-bg="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
+                Contact
+            </li>
+        </ul>
+    </nav>
 
-        <table id="homework-table">
-            <thead>
-                <tr>
-                    <th>Lecture Name</th>
-                    <th>Homework Link (Notion)</th>
-                </tr>
-            </thead>
-            <!-- The table body will be filled by JavaScript -->
-            <tbody id="table-body">
-                <!-- Example of how a row would look (but it will be generated automatically) -->
-                <!-- 
-                <tr>
-                    <td>Introduction to AI</td>
-                    <td><a href="..." target="_blank">View Homework</a></td>
-                </tr> 
-                -->
-            </tbody>
-        </table>
-    </div>
+    <!-- ========== RIGHT: CONTENT AREA ========== -->
+    <main class="content-area">
+        <!-- 
+            Each div is a 'view-pane'. The one with the 'active' class is shown.
+            Its ID must match the data-view attribute from the list item above.
+        -->
+        <div id="view-home" class="view-pane active">
+            <div class="container">
+                <h1>Orientation Homework Links</h1>
+
+                <table id="homework-table">
+                    <thead>
+                        <tr>
+                            <th>Lecture Name</th>
+                            <th>Homework Link (Notion)</th>
+                        </tr>
+                    </thead>
+                    <!-- The table body will be filled by JavaScript -->
+                    <tbody id="table-body">
+                        <!-- Example of how a row would look (but it will be generated automatically) -->
+                        <!-- 
+                        <tr>
+                            <td>Introduction to AI</td>
+                            <td><a href="..." target="_blank">View Homework</a></td>
+                        </tr> 
+                        -->
+                    </tbody>
+                </table>
+            </div>
+
+    
+        </div>
+
+        <div id="view-about" class="view-pane">
+            <h1>About Me</h1>
+            <ul>
+                <h2>連續兩年台大公衛欄中</h2>
+                <img src="IMG_1099.JPG" id = "MyPhoto">
+                <h2>榮獲公衛盃殿軍，季軍，亞軍</h2>
+                <li>Web Design</li>
+                <li>Machine Learning</li>
+                <li>Deep Learning</li>
+            </ul>
+        </div>
+
+        <div id="view-portfolio" class="view-pane">
+            <h1>My Portfolio</h1>
+            <p>Showcase your best projects here.</p>
+            <p>Project 1, Project 2, Project 3...</p>
+        </div>
+
+        <div id="view-contact" class="view-pane">
+            <h1>Contact Information</h1>
+            <h3>Mail: </h3><a href = "ryanj2002@iir.csie.ncku.edu.tw">ryanj2002@iir.csie.ncku.edu.tw</a>
+            <h3>Youtube: </h3> <a href = "https://youtube.com/@justice2369?si=mZTy8K0tCnB4tQ0T">https://youtube.com/@justice2369?si=mZTy8K0tCnB4tQ0T</a>
+            <h3>Github</h3><a href = "https://github.com/RyanJ2002">https://github.com/RyanJ2002</a>
+        </div>
+        
+    </main>
+
+</div>
+    
 
     <!-- Link to the external JavaScript file -->
     <!-- Placed at the end of the body for faster page loading -->
     <script src="script.js"></script>
 
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const navItems = document.querySelectorAll('.sidebar-nav li');
+    const viewPanes = document.querySelectorAll('.view-pane');
+    
+    // Function to set the initial background on page load
+    function setInitialBackground() {
+        const activeItem = document.querySelector('.sidebar-nav li.active');
+        if (activeItem) {
+            const initialBg = activeItem.dataset.bg;
+            if (initialBg) {
+                document.body.style.backgroundImage = `url('${initialBg}')`;
+            }
+        }
+    }
+
+    // Add click event listener to each navigation item
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Get data from the clicked item
+            const viewId = this.dataset.view;
+            const bgImage = this.dataset.bg;
+
+            // --- 1. Update the Active State for Navigation ---
+            // Remove 'active' from the current active item
+            document.querySelector('.sidebar-nav li.active').classList.remove('active');
+            // Add 'active' to the clicked item
+            this.classList.add('active');
+
+            // --- 2. Update the Visible Content Pane ---
+            // Hide the current active pane
+            document.querySelector('.view-pane.active').classList.remove('active');
+            // Show the new pane that corresponds to the clicked item
+            document.getElementById(viewId).classList.add('active');
+
+            // --- 3. Update the Body Background Image ---
+            if (bgImage) {
+                document.body.style.backgroundImage = `url('${bgImage}')`;
+            }
+        });
+    });
+
+    // Set the initial background when the page loads
+    setInitialBackground();
+
+});
+</script>
 </body>
 </html>
