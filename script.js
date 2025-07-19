@@ -70,7 +70,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const navItems = document.querySelectorAll('.sidebar-nav li');
     const viewPanes = document.querySelectorAll('.view-pane');
-    
+
+    // =================================================================
+    // NEW FUNCTION TO PRELOAD IMAGES
+    // =================================================================
+    function preloadBackgroundImages() {
+        console.log("Preloading background images...");
+        navItems.forEach(item => {
+            // Get the background image URL from the data attribute
+            const bgImage = item.dataset.bg;
+            
+            // Check if the data-bg attribute exists
+            if (bgImage) {
+                // Create a new Image object in memory
+                const img = new Image();
+                // Set its source to the image URL. This triggers the download.
+                img.src = bgImage;
+            }
+        });
+    }
+
     // Function to set the initial background on page load
     function setInitialBackground() {
         const activeItem = document.querySelector('.sidebar-nav li.active');
@@ -85,20 +104,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click event listener to each navigation item
     navItems.forEach(item => {
         item.addEventListener('click', function() {
-            // Get data from the clicked item
+            // Check if the item has a 'data-view' attribute.
+            // This prevents errors for links that go to other pages (like your achievements.html).
+            if (!this.dataset.view) {
+                return; // Do nothing if it's a simple link
+            }
+
             const viewId = this.dataset.view;
             const bgImage = this.dataset.bg;
 
             // --- 1. Update the Active State for Navigation ---
-            // Remove 'active' from the current active item
-            document.querySelector('.sidebar-nav li.active').classList.remove('active');
-            // Add 'active' to the clicked item
+            const currentActiveItem = document.querySelector('.sidebar-nav li.active');
+            if (currentActiveItem) {
+                currentActiveItem.classList.remove('active');
+            }
             this.classList.add('active');
 
             // --- 2. Update the Visible Content Pane ---
-            // Hide the current active pane
-            document.querySelector('.view-pane.active').classList.remove('active');
-            // Show the new pane that corresponds to the clicked item
+            const currentActivePane = document.querySelector('.view-pane.active');
+            if (currentActivePane) {
+                currentActivePane.classList.remove('active');
+            }
             document.getElementById(viewId).classList.add('active');
 
             // --- 3. Update the Body Background Image ---
@@ -107,8 +133,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Set the initial background when the page loads
+    
+    // --- CALL THE NEW AND EXISTING FUNCTIONS ON PAGE LOAD ---
     setInitialBackground();
+    preloadBackgroundImages(); // <-- This is the new part!
 
 });
